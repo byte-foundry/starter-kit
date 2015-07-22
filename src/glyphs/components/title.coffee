@@ -9,7 +9,7 @@ exports.glyphs['title'] =
 	]
 	contours:
 		0:
-			closed: true
+			closed: false
 			nodes:
 				0:
 					x: 0

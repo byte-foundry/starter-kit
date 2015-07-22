@@ -10,7 +10,7 @@ exports.glyphs['circumflex'] =
 	contours:
 		0:
 			skeleton: false
-			closed: true
+			closed: false
 			nodes:
 				0:
 					x: 0

@@ -10,7 +10,7 @@ exports.glyphs['ampersand'] =
 	contours:
 		0:
 			skeleton: true
-			closed: true
+			closed: false
 			nodes:
 				0:
 					x: 0

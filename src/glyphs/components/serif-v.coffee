@@ -35,7 +35,7 @@ exports.glyphs['serif-v'] =
 	]
 	contours:
 		0:
-			closed: true
+			closed: false
 			nodes:
 				0:
 					y: Math.max( anchors[0].y, anchors[2].max0.y )

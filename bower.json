@@ -1,0 +1,23 @@
+{
+  "name": "starter-kit.ptf",
+  "version": "0.0.0",
+  "homepage": "https://github.com/byte-foundry/starter-kit.ptf",
+  "authors": [
+    "louisremi <lrbabe@gmail.com>"
+  ],
+  "description": "Starter Parametric Typeface for Prototypo",
+  "keywords": [
+    "prototypo",
+    "typeface",
+    "parametric"
+  ],
+  "license": "GPLv3",
+  "main": "./dist/utils.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

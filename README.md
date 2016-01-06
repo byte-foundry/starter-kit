@@ -1,4 +1,4 @@
 # starter-kit.ptf
-=================
+===========
 
-This is a starter kit to build a Parametric Typeface in Prototypo
+Prototypo starter-kit to build a parametric typeface in Prototypo

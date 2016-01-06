@@ -14,3 +14,9 @@ exports.glyphs['_quotesingle'] =
 				0:
 					x: 0
 					y: 0
+					dirOut: 0 + 'deg'
+					expand: Object({
+						width: 0
+						angle: 0 + 'deg'
+						distr: 0.25
+					})

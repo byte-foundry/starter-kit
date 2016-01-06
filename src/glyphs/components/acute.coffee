@@ -1,4 +1,6 @@
 exports.glyphs['acute'] =
+	glyphName: "acute"
+	characterName: "ACUTE ACCENT"
 	anchors:
 		0:
 			x: parentAnchors[0].x
@@ -15,3 +17,9 @@ exports.glyphs['acute'] =
 				0:
 					x: 0
 					y: 0
+					dirOut: 0 + 'deg'
+					expand: Object({
+						width: 0
+						angle: 0 + 'deg'
+						distr: 0.25
+					})

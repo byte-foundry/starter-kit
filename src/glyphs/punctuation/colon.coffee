@@ -1,22 +1,35 @@
 exports.glyphs['colon'] =
-	unicode: ":"
+	unicode: ':'
+	glyphName: 'colon'
+	characterName: 'COLON'
 	ot:
-		advanceWidth: 0
+		advanceWidth: 0 + spacingRight
+	transforms: Array(
+		['skewX', slant + 'deg']
+	)
+	parameters:
+		spacingLeft: 0 * spacing + (0)
+		spacingRight: 0 * spacing
 	tags: [
 		'all',
 		'latin',
 		'punctuation'
 	]
-	components:
+	anchors:
 		0:
-			base: 'dot'
-			parentAnchors:
+			x: 0
+			y: 0
+	contours:
+		0:
+			skeleton: true
+			closed: false
+			nodes:
 				0:
-					x: 125
-					y: - overshoot / 2
-		1:
-			base: 'dot'
-			parentAnchors:
-				0:
-					x: 125
-					y: xHeight + overshoot / 2 - 120
+					x: 0
+					y: 0
+					dirOut: 0 + 'deg'
+					expand: Object({
+						width: 0
+						angle: 0 + 'deg'
+						distr: 0.25
+					})

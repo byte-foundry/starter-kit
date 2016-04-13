@@ -8,7 +8,7 @@ exports.glyphs['bar'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 0 * spacing + (0)
+		spacingLeft: 0 * spacing
 		spacingRight: 0 * spacing
 	tags: [
 		'all',

@@ -13,7 +13,7 @@ exports.glyphs['dotlessi'] =
 	ot:
 		advanceWidth: 0 + spacingRight
 	parameters:
-		spacingLeft: 0 * spacing + (0)
+		spacingLeft: 0 * spacing
 		spacingRight: 0 * spacing
 	contours:
 		0:

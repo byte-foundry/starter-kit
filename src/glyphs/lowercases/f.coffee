@@ -3,13 +3,13 @@ exports.glyphs['f'] =
 	glyphName: 'f'
 	characterName: 'LATIN SMALL LETTER F'
 	ot:
-		advanceWidth: 0 + spacingRight
+		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 0 * spacing
-		spacingRight: 0 * spacing
+		spacingLeft: 50 * spacing
+		spacingRight: 50 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -21,11 +21,22 @@ exports.glyphs['f'] =
 			closed: false
 			nodes:
 				0:
-					x: 0
+					x: 50 + (40/115) * thickness
 					y: 0
-					dirOut: 0 + 'deg'
+					## we set the direction of offcurves
+					dirOut: 90 + 'deg'
 					expand: Object({
-						width: 0
+						width: ( 80 / 115 ) * thickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
+					})
+				1:
+					x: contours[0].nodes[0].x + 300
+					y: xHeight
+					## we set the direction of offcurves
+					dirIn: 180 + 'deg'
+					expand: Object({
+						width: ( 80 / 115 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
 					})

@@ -8,7 +8,7 @@ exports.controls = [
 		min: 300
 		max: 900
 		step: 1
-		init: 520
+		init: 500
 		minAdvised: 300
 		maxAdvised: 800
 		disabled: false
@@ -41,7 +41,7 @@ exports.controls = [
 		min: 50
 		max: 800
 		step: 1
-		init: 230
+		init: 300
 		minAdvised: 50
 		maxAdvised: 500
 		disabled: false
@@ -110,11 +110,11 @@ exports.controls = [
 		name: 'thickness'
 		label: 'Thickness'
 		min: 4
-		max: 180
+		max: 200
 		step: 1
-		init: 115
-		minAdvised: 60
-		maxAdvised: 130
+		init: 80
+		minAdvised: 40
+		maxAdvised: 150
 		disabled: false
 		demo: true
 	,

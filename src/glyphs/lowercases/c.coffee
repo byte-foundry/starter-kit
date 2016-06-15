@@ -3,13 +3,13 @@ exports.glyphs['c'] =
 	glyphName: 'c'
 	characterName: 'LATIN SMALL LETTER C'
 	ot:
-		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
+		advanceWidth: contours[0].nodes[4].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing
-		spacingRight: 50 * spacing
+		spacingLeft: 30 * spacing
+		spacingRight: 70 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -21,20 +21,48 @@ exports.glyphs['c'] =
 			closed: false
 			nodes:
 				0:
-					x: 50 + (40/115) * thickness
-					y: 0
-					typeOut: 'line'
+					x: 220 + 200 * width
+					y: xHeight - 50
+					dirOut: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) - 20 / 180 * Math.PI 
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
+						width: thickness
+						angle: - 90 + 'deg'
+						distr: 0.1
+					})
+				1:
+					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[0].x - contours[0].nodes[2].expandedTo[1].x ) * (150/310)
+					y: xHeight + overshoot
+					dirOut: 0 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: - 90 + 'deg'
+						distr: 0
+					})
+				2:
+					x: spacingLeft + 0.25 * thickness
+					y: xHeight / 2
+					type: 'smooth'
+					dirOut: - 90 + 'deg'
+					expand: Object({
+						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
-				1:
-					x: contours[0].nodes[0].x ## refers to another node
-					y: xHeight
-					typeOut: 'line'
+				3:
+					x: contours[0].nodes[2].expandedTo[1].x + ( contours[0].nodes[0].x - contours[0].nodes[2].expandedTo[1].x ) * (150/310)
+					y: 0 - overshoot
+					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
-						angle: 0 + 'deg'
-						distr: 0.5
+						width: thickness
+						angle: 90 + 'deg'
+						distr: 0
+					})
+				4:
+					x: contours[0].nodes[0].x + 10
+					y: 50
+					dirIn: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[4].point ) + 20 / 180 * Math.PI 
+					expand: Object({
+						width: thickness
+						angle: 90 + 'deg'
+						distr: 0.1
 					})

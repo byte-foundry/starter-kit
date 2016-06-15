@@ -35,16 +35,16 @@ exports.glyphs['J'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: 40 + (12 / 80) * thickness * opticThickness
+					y: 40 + (30 / 80) * thickness * opticThickness
 					dirOut: - 90 + 'deg'
 					expand: Object({
 						width: ( 100 / 80 ) * thickness * opticThickness
-						angle: 29 + 'deg'
+						angle: (29 - 10 * (thickness * opticThickness / 80)) + 'deg'
 						distr: 0.25
 					})
 				2:
 					x:  contours[0].nodes[3].x + (contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[3].x) * 0.5
-					y: - 200
+					y: contours[0].nodes[1].y - 270 - (50 / 80) * thickness * opticThickness
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({

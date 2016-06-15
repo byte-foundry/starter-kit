@@ -51,7 +51,7 @@ exports.glyphs['n'] =
 						angle: - 90 + 'deg'
 						distr: 0.1
 					})
-				1: 
+				1:
 					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) * (200/300)
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'

@@ -3,12 +3,12 @@ exports.glyphs['b'] =
 	glyphName: 'b'
 	characterName: 'LATIN SMALL LETTER B'
 	ot:
-		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
+		advanceWidth: contours[1].nodes[2].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing
+		spacingLeft: 70 * spacing
 		spacingRight: 50 * spacing
 	tags: [
 		'all',
@@ -21,20 +21,71 @@ exports.glyphs['b'] =
 			closed: false
 			nodes:
 				0:
-					x: 70
+					x: spacingLeft + 0.25 * thickness
+					y: ascenderHeight
+					typeOut: 'line'
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+				1:
+					x: contours[0].nodes[0].x
 					y: 0
 					typeOut: 'line'
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
+					})
+		1:
+			skeleton: true
+			closed: false
+			nodes:
+				0:
+					x: contours[0].nodes[0].x
+					y: xHeight - 150 - (0/80) * thickness
+					dirOut: 55 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: 180 - 90 + 'deg'
+						distr: 0.9
 					})
 				1:
-					x: 70
-					y: xHeight ## linked to parameters
-					typeOut: 'line'
+					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) * (200/300)
+					y: xHeight + overshoot
+					dirOut: 0 + 'deg'
 					expand: Object({
-						width: ( 40 / 115 ) * thickness ## linked to parameters
-						angle: 0 + 'deg'
-						distr: 0.5
+						width: 90 / 80 * thickness
+						angle: 100 + 'deg'
+						distr: 1
+					})
+				2:
+					x: 310 + 200 * width
+					y: xHeight - 180 - (8/80) * thickness
+					dirIn: 90 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: thickness
+						angle: 180 + 190 + 'deg'
+						distr: 0.75
+					})
+				3:
+					x: contours[0].nodes[0].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[0].expandedTo[1].x ) * (200/300)
+					y: - overshoot
+					dirIn: 0 + 'deg'
+					type: 'smooth'
+					expand: Object({
+						width: thickness
+						angle: 270 + 'deg'
+						distr: 1
+					})
+				4:
+					x: contours[0].nodes[0].x
+					y: 115 - (8/80) * thickness
+					dirIn: 310 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: - 80 + 'deg'
+						distr: 0.9
 					})

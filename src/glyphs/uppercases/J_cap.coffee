@@ -1,4 +1,4 @@
-exports.glyphs['J_cap'] =
+exports.glyphs['J'] =
 	unicode: 'J'
 	glyphName: 'J'
 	characterName: 'LATIN CAPITAL LETTER J'
@@ -8,12 +8,12 @@ exports.glyphs['J_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 0 * spacing
-		spacingRight: 0 * spacing
+		spacingLeft: 70 * spacing
+		spacingRight: 70 * spacing
 	tags: [
 		'all',
 		'latin',
-		'uppercase'
+		'lowercase'
 	]
 	anchors:
 		0:
@@ -25,11 +25,29 @@ exports.glyphs['J_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 0
-					y: 0
-					dirOut: 0 + 'deg'
+					x: spacingLeft + 0.25 * thickness
+					y: xHeight + 100
+					typeOut: 'line'
 					expand: Object({
-						width: 0
+						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.25
+					})
+				1:
+					x: spacingLeft + 0.25 * thickness
+					y: contours[0].nodes[2].expandedTo[1].y + 70
+					dirOut: 90 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+				2:
+					x: contours[0].nodes[0].expandedTo[1].x + 70
+					y: - overshoot
+					dirIn: 0 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: 90 + 'deg'
+						distr: 0
 					})

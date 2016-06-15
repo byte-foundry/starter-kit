@@ -3,13 +3,13 @@ exports.glyphs['I_cap'] =
 	glyphName: 'I'
 	characterName: 'LATIN CAPITAL LETTER I'
 	ot:
-		advanceWidth: 0 + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 0 * spacing
-		spacingRight: 0 * spacing
+		spacingLeft: 80 * spacing
+		spacingRight: 80 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -25,11 +25,20 @@ exports.glyphs['I_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 0
+					x: spacingLeft + 0.25 * (88 / 80 *thickness * opticThickness)
 					y: 0
-					dirOut: 0 + 'deg'
+					typeOut: "line"
 					expand: Object({
-						width: 0
+						width: (88 / 80 *thickness * opticThickness)
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
+					})
+				1:
+					x: contours[0].nodes[0].x
+					y: capHeight
+					typeOut: "line"
+					expand: Object({
+						width: (88 / 80 *thickness * opticThickness)
+						angle: 0 + 'deg'
+						distr: 0.5
 					})

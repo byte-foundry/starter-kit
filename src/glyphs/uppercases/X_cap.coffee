@@ -3,13 +3,13 @@ exports.glyphs['X_cap'] =
 	glyphName: 'X'
 	characterName: 'LATIN CAPITAL LETTER X'
 	ot:
-		advanceWidth: 0 + spacingRight
+		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 0 * spacing
-		spacingRight: 0 * spacing
+		spacingLeft: 30 * spacing
+		spacingRight: 30 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -21,11 +21,60 @@ exports.glyphs['X_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: 0
+					x: spacingLeft + 0.25 * (88 / 80 * thickness * opticThickness)
 					y: 0
-					dirOut: 0 + 'deg'
+					typeOut: "line"
 					expand: Object({
-						width: 0
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 8
 						angle: 0 + 'deg'
 						distr: 0.25
+					})
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+					y: capHeight * 0.5
+					typeOut: "line"
+					expand: Object({
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 6
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
+				2:
+					x: spacingLeft + 0.25 * (88 / 80 * thickness * opticThickness)
+					y: capHeight
+					typeOut: "line"
+					expand: Object({
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 8
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+		1:
+			skeleton: true
+			closed: false
+			nodes:
+				0:
+					x: 280 + 200 * width + 0.75 * (88 / 80 * thickness * opticThickness)
+					y: 0
+					typeOut: "line"
+					expand: Object({
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 8
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
+				1:
+					x: contours[0].nodes[0].expandedTo[0].x + ( contours[1].nodes[0].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) / 2
+					y: capHeight * 0.5
+					typeOut: "line"
+					expand: Object({
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 6
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+				2:
+					x: 280 + 200 * width + 0.75 * (88 / 80 * thickness * opticThickness)
+					y: capHeight
+					typeOut: "line"
+					expand: Object({
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 8
+						angle: 0 + 'deg'
+						distr: 0.75
 					})

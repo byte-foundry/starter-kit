@@ -129,7 +129,7 @@ exports.glyphs['G_cap'] =
 					expand: Object({
 						width: thickness * opticThickness
 						angle: -90 + 'deg'
-						distr: 0
+						distr: 0.5
 					})
 				1:
 					x: contours[4].nodes[0].x - 130 - 100 * width - (thickness / 80 - 1) * 20
@@ -138,5 +138,5 @@ exports.glyphs['G_cap'] =
 					expand: Object({
 						width: thickness * opticThickness
 						angle: -90 + 'deg'
-						distr: 0
+						distr: 0.5
 					})

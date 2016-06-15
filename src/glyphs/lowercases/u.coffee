@@ -3,33 +3,79 @@ exports.glyphs['u'] =
 	glyphName: 'u'
 	characterName: 'LATIN SMALL LETTER U'
 	ot:
-		advanceWidth: 0 + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 0 * spacing
-		spacingRight: 0 * spacing
+		spacingLeft: 70 * spacing
+		spacingRight: 70 * spacing
 	tags: [
 		'all',
 		'latin',
 		'lowercase'
 	]
-	anchors:
-		0:
-			x: 0
-			y: 0
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: 0
-					y: 0
-					dirOut: 0 + 'deg'
+					x: 310 + 200 * width - 0.25 * thickness
+					y: xHeight
+					typeOut: 'line'
 					expand: Object({
-						width: 0
+						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.75
+					})
+				1:
+					x: contours[0].nodes[0].x
+					y: 0
+					typeOut: 'line'
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
+		1:
+			skeleton: true
+			closed: false
+			nodes:
+				0:
+					x: contours[0].nodes[0].x
+					y: 80 + 30 * width
+					y: 110 + (8/80) * thickness
+					dirOut: 40 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: - 90 + 'deg'
+						distr: 0.9
+					})
+				1: 
+					x: contours[1].nodes[2].expandedTo[1].x - ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * (100/300)
+					y: 0 - overshoot
+					dirIn: 0 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: - 90 + 'deg'
+						distr: 1
+					})
+				2:
+					x: spacingLeft + 0.25 * thickness
+					y: 80 + 30 * width
+					dirIn: 90 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: thickness
+						angle: 180 + 12 + 'deg'
+						distr: 0.75
+					})
+				3:
+					x: contours[1].nodes[2].x
+					y: xHeight
+					expand: Object({
+						width: thickness
+						angle: 180 + 'deg'
+						distr: 0.75
 					})

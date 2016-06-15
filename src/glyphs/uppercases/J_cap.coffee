@@ -3,7 +3,7 @@ exports.glyphs['J'] =
 	glyphName: 'J'
 	characterName: 'LATIN CAPITAL LETTER J'
 	ot:
-		advanceWidth: 0 + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -26,28 +26,38 @@ exports.glyphs['J'] =
 			nodes:
 				0:
 					x: spacingLeft + 0.25 * thickness
-					y: xHeight + 100
+					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
-					x: spacingLeft + 0.25 * thickness
-					y: contours[0].nodes[2].expandedTo[1].y + 70
-					dirOut: 90 + 'deg'
+					x: contours[0].nodes[0].x
+					y: 40 + (12 / 80) * thickness * opticThickness
+					dirOut: - 90 + 'deg'
 					expand: Object({
-						width: thickness
-						angle: 0 + 'deg'
+						width: ( 100 / 80 ) * thickness * opticThickness
+						angle: 29 + 'deg'
 						distr: 0.25
 					})
 				2:
-					x: contours[0].nodes[0].expandedTo[1].x + 70
-					y: - overshoot
-					dirIn: 0 + 'deg'
+					x:  contours[0].nodes[3].x + (contours[0].nodes[0].expandedTo[0].x - contours[0].nodes[3].x) * 0.5
+					y: - 200
+					dirOut: 180 + 'deg'
+					type: 'smooth'
 					expand: Object({
-						width: thickness
-						angle: 90 + 'deg'
-						distr: 0
+						width: thickness * opticThickness
+						angle: - 90 + 'deg'
+						distr: 1
+					})
+				3:
+					x:  - 280
+					y: contours[0].nodes[2].y + 50
+					dirIn: - 30 + 'deg'
+					expand: Object({
+						width: ( 90 / 80 ) * thickness * opticThickness
+						angle: - 90 + 'deg'
+						distr: 1
 					})

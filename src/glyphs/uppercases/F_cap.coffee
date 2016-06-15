@@ -52,7 +52,7 @@ exports.glyphs['F_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[1].nodes[0].expandedTo[1].x + 300
+					x: contours[1].nodes[0].expandedTo[1].x + 100 + 200 * width
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
 					expand: Object({
@@ -74,7 +74,7 @@ exports.glyphs['F_cap'] =
 						distr: 0.5
 					})
 				1:
-					x: contours[1].nodes[1].x - 35
+					x: contours[1].nodes[1].x - 35 * width
 					y: capHeight / 2
 					typeOut: 'line'
 					expand: Object({

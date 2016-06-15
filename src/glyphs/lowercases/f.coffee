@@ -25,16 +25,16 @@ exports.glyphs['f'] =
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness  + (width - 1) * 15 * (thickness / 80 - 1)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: xHeight
+					y: xHeight - (width - 1) * 15 * (thickness / 80 - 1)
 					dirOut: 90 + 'deg'
 					expand: Object({
-						width: thickness
+						width: thickness + (width - 1) * 15 * (thickness / 80 - 1)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -68,4 +68,3 @@ exports.glyphs['f'] =
 						angle: 90 + 'deg'
 						distr: 1
 					})
-				

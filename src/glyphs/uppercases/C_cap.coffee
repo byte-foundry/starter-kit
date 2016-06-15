@@ -39,7 +39,7 @@ exports.glyphs['C_cap'] =
 					y: capHeight / 2
 					dirOut: 90 + 'deg'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness + (width - 1) * 15 * (thickness / 80 - 1)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -68,7 +68,7 @@ exports.glyphs['C_cap'] =
 				1:
 					x: 375 + 200 * width
 					y: contours[1].nodes[0].y - 40
-					dirIn: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) - 20 / 180 * Math.PI 
+					dirIn: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) - 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness * opticThickness
 						angle: -90 + 'deg'
@@ -90,7 +90,7 @@ exports.glyphs['C_cap'] =
 				1:
 					x: 375 + 200 * width
 					y: contours[2].nodes[0].y + 40
-					dirIn: Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) + 20 / 180 * Math.PI 
+					dirIn: Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) + 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness * opticThickness
 						angle: 90 + 'deg'

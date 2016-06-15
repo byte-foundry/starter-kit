@@ -25,7 +25,7 @@ exports.glyphs['J'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + 0.25 * thickness
+					x: spacingLeft + 0.25 * thickness + 25 * width
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
@@ -38,7 +38,7 @@ exports.glyphs['J'] =
 					y: 40 + (30 / 80) * thickness * opticThickness
 					dirOut: - 90 + 'deg'
 					expand: Object({
-						width: ( 100 / 80 ) * thickness * opticThickness
+						width: ( 95 / 80 ) * thickness * opticThickness
 						angle: (29 - 10 * (thickness * opticThickness / 80)) + 'deg'
 						distr: 0.25
 					})
@@ -53,7 +53,7 @@ exports.glyphs['J'] =
 						distr: 1
 					})
 				3:
-					x:  - 280
+					x:  - 205 - 175 * width
 					y: contours[0].nodes[2].y + 50
 					dirIn: - 30 + 'deg'
 					expand: Object({

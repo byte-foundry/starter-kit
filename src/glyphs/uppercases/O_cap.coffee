@@ -40,7 +40,7 @@ exports.glyphs['O_cap'] =
 					y: capHeight / 2
 					dirOut: 90 + 'deg'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness + (width - 1) * 15  * (thickness / 80 - 1)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -58,7 +58,7 @@ exports.glyphs['O_cap'] =
 					y: contours[0].nodes[1].y
 					dirOut: 270 + 'deg'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness  + (width - 1) * 15  * (thickness / 80 - 1)
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

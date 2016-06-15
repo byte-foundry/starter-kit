@@ -23,7 +23,7 @@ exports.glyphs['c'] =
 				0:
 					x: 220 + 200 * width
 					y: xHeight - 50
-					dirOut: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) - 20 / 180 * Math.PI 
+					dirOut: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) - 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness
 						angle: - 90 + 'deg'
@@ -44,7 +44,7 @@ exports.glyphs['c'] =
 					type: 'smooth'
 					dirOut: - 90 + 'deg'
 					expand: Object({
-						width: thickness
+						width: thickness + (width - 1) * 20  * (thickness / 80 - 1)
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
@@ -60,7 +60,7 @@ exports.glyphs['c'] =
 				4:
 					x: contours[0].nodes[0].x + 10
 					y: 50
-					dirIn: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[4].point ) + 20 / 180 * Math.PI 
+					dirIn: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[4].point ) + 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness
 						angle: 90 + 'deg'

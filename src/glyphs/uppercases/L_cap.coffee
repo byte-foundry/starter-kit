@@ -43,7 +43,7 @@ exports.glyphs['L_cap'] =
 			closed: false
 			nodes:
 				1:
-					x: contours[0].nodes[0].expandedTo[1].x + 300
+					x: contours[0].nodes[0].expandedTo[1].x + 100 + 200 * width
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
 					expand: Object({

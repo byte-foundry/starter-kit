@@ -8,7 +8,7 @@ exports.glyphs['G_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing
+		spacingLeft: 30 * spacing
 		spacingRight: 30 * spacing
 	tags: [
 		'all',
@@ -39,7 +39,7 @@ exports.glyphs['G_cap'] =
 					y: capHeight / 2
 					dirOut: 90 + 'deg'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness + (width - 1) * 15  * (thickness / 80 - 1)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -66,9 +66,9 @@ exports.glyphs['G_cap'] =
 						distr: 0
 					})
 				1:
-					x: 375 + 200 * width
+					x: 375 + 200 * width  + (thickness / 80 - 1) * width * 30
 					y: contours[1].nodes[0].y - 40
-					dirIn: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) - 20 / 180 * Math.PI 
+					dirIn: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) - 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness * opticThickness
 						angle: -90 + 'deg'
@@ -88,9 +88,9 @@ exports.glyphs['G_cap'] =
 						distr: 0
 					})
 				1:
-					x: 375 + 200 * width
+					x: 375 + 200 * width + (thickness / 80 - 1) * width * 30
 					y: contours[2].nodes[0].y + 40
-					dirIn: Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) + 20 / 180 * Math.PI 
+					dirIn: Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) + 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness * opticThickness
 						angle: 90 + 'deg'
@@ -111,7 +111,7 @@ exports.glyphs['G_cap'] =
 					})
 				1:
 					x: contours[2].nodes[1].x
-					y: contours[0].nodes[1].y
+					y: contours[0].nodes[1].y + (thickness / 80 - 1) * 55
 					typeOut: 'line'
 					expand: Object({
 						width: thickness * opticThickness
@@ -132,7 +132,7 @@ exports.glyphs['G_cap'] =
 						distr: 0
 					})
 				1:
-					x: contours[4].nodes[0].x - 130 - 100 * width
+					x: contours[4].nodes[0].x - 130 - 100 * width - (thickness / 80 - 1) * 20
 					y: contours[4].nodes[0].y
 					typeOut: 'line'
 					expand: Object({

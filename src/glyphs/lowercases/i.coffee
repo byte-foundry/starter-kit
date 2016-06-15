@@ -3,14 +3,13 @@ exports.glyphs['i'] =
 	glyphName: 'i'
 	characterName: 'LATIN SMALL LETTER I'
 	ot:
-		## because of the rotate, we change the referal contour node
-		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+		advanceWidth: contours[0].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing
-		spacingRight: 50 * spacing
+		spacingLeft: 60 * spacing
+		spacingRight: 60 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -22,31 +21,44 @@ exports.glyphs['i'] =
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (40/115) * thickness
+					x: spacingLeft + 0.5 * thickness
 					y: 0
-					dirOut: 90 + 'deg'
+					typeOut: 'line'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
+						width: thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
 				1:
-					## the node is between the 2 others
-					x: contours[0].nodes[0].x + ( contours[0].nodes[2].x - contours[0].nodes[0].x ) / 2
+					x: contours[0].nodes[0].x
 					y: xHeight
-					dirIn: 180 + 'deg'
+					typeOut: 'line'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
-						angle: - 90 + 'deg'
+						width: thickness
+						angle: 0 + 'deg'
 						distr: 0.5
 					})
+		1:
+			skeleton: false
+			closed: true
+			nodes:
+				0:
+					x: contours[0].nodes[0].x
+					y: xHeight + 80
+					dirOut: 180 + 'deg'
+					type: 'smooth'
+				1:
+					x: contours[1].nodes[0].x - 1.1 * thickness / 2
+					y: contours[1].nodes[0].y + 1.1 * thickness / 2
+					dirOut: 90 + 'deg'
+					type: 'smooth'
 				2:
-					x: 400 + (40/115) * thickness
-					y: 0
-					dirIn: 90 + 'deg'
-					expand: Object({
-						width: ( 80 / 115 ) * thickness
-						## we set a rotate to prevent the contours crossing each other
-						angle: 180 + 'deg'
-						distr: 0.5
-					})
+					x: contours[1].nodes[0].x
+					y: contours[1].nodes[0].y + 1.1 * thickness
+					dirOut: 0 + 'deg'
+					type: 'smooth'
+				3:
+					x: contours[1].nodes[1].x + 1.1 * thickness
+					y: contours[1].nodes[1].y
+					dirOut: 270 + 'deg'
+					type: 'smooth'

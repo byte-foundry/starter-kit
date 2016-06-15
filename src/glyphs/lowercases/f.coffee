@@ -3,13 +3,13 @@ exports.glyphs['f'] =
 	glyphName: 'f'
 	characterName: 'LATIN SMALL LETTER F'
 	ot:
-		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
+		advanceWidth: contours[0].nodes[2].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing
-		spacingRight: 50 * spacing
+		spacingLeft: 70 * spacing
+		spacingRight: 70 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -21,22 +21,51 @@ exports.glyphs['f'] =
 			closed: false
 			nodes:
 				0:
-					x: 50 + (40/115) * thickness
+					x: spacingLeft + 0.25 * thickness
 					y: 0
-					## we set the direction of offcurves
-					dirOut: 90 + 'deg'
+					typeOut: 'line'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
+						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].x + 300
+					x: contours[0].nodes[0].x
 					y: xHeight
-					## we set the direction of offcurves
+					dirOut: 90 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+				2:
+					x: contours[0].nodes[0].x + 260 * width
+					y: ascenderHeight
 					dirIn: 180 + 'deg'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
-						angle: 0 + 'deg'
-						distr: 0.5
+						width: thickness
+						angle: 270 + 'deg'
+						distr: 0.25
+					})
+		1:
+			skeleton: true
+			closed: false
+			nodes:
+				0:
+					x: contours[0].nodes[0].x - 60
+					y: xHeight
+					typeOut: 'line'
+					expand: Object({
+						width: thickness
+						angle: 90 + 'deg'
+						distr: 1
+					})
+				1:
+					x: contours[0].nodes[0].x + 190 * width
+					y: xHeight
+					dirOut: 90 + 'deg'
+					expand: Object({
+						width: thickness
+						angle: 90 + 'deg'
+						distr: 1
 					})

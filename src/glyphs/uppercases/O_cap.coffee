@@ -3,13 +3,13 @@ exports.glyphs['O_cap'] =
 	glyphName: 'O'
 	characterName: 'LATIN CAPITAL LETTER O'
 	ot:
-		advanceWidth: 0 + spacingRight
+		advanceWidth: contours[0].nodes[3].expandedTo[0].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 0 * spacing
-		spacingRight: 0 * spacing
+		spacingLeft: 50 * spacing
+		spacingRight: 50 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -24,12 +24,11 @@ exports.glyphs['O_cap'] =
 	contours:
 		0:
 			skeleton: true
-			closed: false
+			closed: true
 			nodes:
 				0:
-					x: 215 + 200 * width
-					x: contours[0].nodes[1].expandedTo[1].x + ( contours[0].nodes[1].x - contours[0].nodes[1].expandedTo[1].x ) * (260/425)
-					y: -overshoot
+					x: (contours[0].nodes[1].x + contours[0].nodes[3].x) / 2
+					y: - overshoot
 					dirOut: 180 + 'deg'
 					expand: Object({
 						width: thickness * opticThickness
@@ -46,11 +45,20 @@ exports.glyphs['O_cap'] =
 						distr: 0.25
 					})
 				2:
-					x: contours[0].nodes[0].x - 10
+					x: contours[0].nodes[0].x
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					expand: Object({
 						width: thickness * opticThickness
 						angle: -90 + 'deg'
 						distr: 0
+					})
+				3:
+					x: contours[0].nodes[1].x + 500 + 200 * width - 0.25 * contours[0].nodes[1].expand.width
+					y: contours[0].nodes[1].y
+					dirOut: 270 + 'deg'
+					expand: Object({
+						width: 90 / 80 * thickness * opticThickness
+						angle: 180 + 'deg'
+						distr: 0.25
 					})

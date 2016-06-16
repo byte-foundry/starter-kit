@@ -8,8 +8,8 @@ exports.glyphs['V_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 30 * spacing
-		spacingRight: 30 * spacing
+		spacingLeft: 20 * spacing
+		spacingRight: 20 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -25,7 +25,7 @@ exports.glyphs['V_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness + (width - 1) * 5
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 5
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -34,7 +34,7 @@ exports.glyphs['V_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness + (width - 1) * 5
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 5
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -47,7 +47,7 @@ exports.glyphs['V_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness + (width - 1) * 5
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 5
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -56,7 +56,7 @@ exports.glyphs['V_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness + (width - 1) * 5
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 5
 						angle: 0 + 'deg'
 						distr: 0.75
 					})

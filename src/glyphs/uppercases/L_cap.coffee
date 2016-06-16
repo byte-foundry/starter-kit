@@ -9,7 +9,7 @@ exports.glyphs['L_cap'] =
 	)
 	parameters:
 		spacingLeft: 70 * spacing
-		spacingRight: 40 * spacing
+		spacingRight: 30 * spacing
 	tags: [
 		'all',
 		'latin',

@@ -10,6 +10,7 @@ exports.glyphs['S_cap'] =
 	parameters:
 		spacingLeft: 40 * spacing
 		spacingRight: 50 * spacing
+
 	tags: [
 		'all',
 		'latin',

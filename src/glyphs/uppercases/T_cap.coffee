@@ -8,8 +8,8 @@ exports.glyphs['T_cap'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 30 * spacing
-		spacingRight: 30 * spacing
+		spacingLeft: 25 * spacing
+		spacingRight: 25 * spacing
 	tags: [
 		'all',
 		'latin',

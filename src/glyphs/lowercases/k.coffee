@@ -3,7 +3,7 @@ exports.glyphs['k'] =
 	glyphName: 'k'
 	characterName: 'LATIN SMALL LETTER K'
 	ot:
-		advanceWidth: contours[0].nodes[2].expandedTo[0].x + spacingRight
+		advanceWidth: contours[1].nodes[0].expandedTo[1].x + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -18,40 +18,54 @@ exports.glyphs['k'] =
 	contours:
 		0:
 			skeleton: true
-			## We close the contour
-			closed: true
+			closed: false
 			nodes:
 				0:
-					x: spacingLeft + (40/115) * thickness
+					x: spacingLeft + 0.25 * thickness
 					y: 0
-					dirOut: 90 + 'deg'
+					typeOut: "line"
 					expand: Object({
-						width: ( 80 / 80 ) * thickness
+						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.5
+						distr: 0.25
 					})
 				1:
-					x: contours[0].nodes[0].x + ( contours[0].nodes[2].x - contours[0].nodes[0].x ) / 2
-					y: xHeight
-					dirIn: 180 + 'deg'
+					x: contours[0].nodes[0].x
+					y: ascenderHeight
+					typeOut: "line"
 					expand: Object({
-						width: ( 80 / 80 ) * thickness
-						angle: - 90 + 'deg'
-						distr: 0.5
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+		1:
+			skeleton: true
+			closed: false
+			nodes:
+				0:
+					x: 170 + 200 * width + 0.75 * thickness
+					y: 0
+					typeOut: "line"
+					expand: Object({
+						width: ( 90 / 80 ) * thickness + (width - 1) * ( 40 / 80 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.75
+					})
+				1:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: xHeight * 0.6
+					typeOut: "line"
+					expand: Object({
+						width: ( 85 / 80 ) * thickness + (width - 1) * ( 30 / 80 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.25
 					})
 				2:
-					x: 400 + (40/115) * thickness
-					y: 0
+					x: 150 + 200 * width + 0.75 * thickness
+					y: xHeight
+					typeOut: "line"
 					expand: Object({
-						width: ( 80 / 80 ) * thickness
-						angle: 180 + 'deg'
-						distr: 0.5
-					})
-				3:
-					x: contours[0].nodes[1].x
-					y: descender
-					expand: Object({
-						width: ( 80 / 80 ) * thickness
-						angle: 90 + 'deg'
-						distr: 0.5
+						width: ( 100 / 80 ) * thickness + (width - 1) * ( 40 / 80 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.75
 					})

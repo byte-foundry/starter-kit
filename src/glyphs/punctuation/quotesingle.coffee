@@ -17,8 +17,8 @@ exports.glyphs['quotesingle'] =
 		spacingRight: 45 * spacing
 	components:
 		0:
-			base: '_quotesingle'
+			base: '_quoteright'
 			parentAnchors:
 				0:
-					x: spacingLeft + minThickness / 2
-					y: capHeight
+					x: spacingLeft + Math.max( 40, 1.25 * thickness ) / 2
+					y: capHeight - thickness

@@ -22,10 +22,10 @@ exports.glyphs['quotedblright'] =
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness / 2
-					y: capHeight
+					y: capHeight - thickness
 		1:
 			base: '_quoteright'
 			parentAnchors:
 				0:
 					x: spacingLeft + minThickness + space
-					y: capHeight
+					y: capHeight - thickness

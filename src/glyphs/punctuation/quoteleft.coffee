@@ -3,7 +3,7 @@ exports.glyphs['quoteleft'] =
 	glyphName: 'quoteleft'
 	characterName: 'LEFT SINGLE QUOTATION MARK'
 	ot:
-		advanceWidth: spacingLeft + minThickness + spacingRight
+		advanceWidth: spacingLeft + thickness + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -21,4 +21,4 @@ exports.glyphs['quoteleft'] =
 			parentAnchors:
 				0:
 					x: spacingLeft
-					y: capHeight
+					y: capHeight - thickness

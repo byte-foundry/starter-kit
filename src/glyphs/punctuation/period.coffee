@@ -3,7 +3,7 @@ exports.glyphs['period'] =
 	glyphName: 'period'
 	characterName: 'FULL STOP'
 	ot:
-		advanceWidth: spacingLeft + minThickness + spacingRight
+		advanceWidth: spacingLeft + thickness + spacingRight
 	transforms: Array(
 		['skewX', slant + 'deg']
 	)
@@ -20,5 +20,5 @@ exports.glyphs['period'] =
 			base: 'dot'
 			parentAnchors:
 				0:
-					x: spacingLeft + minThickness / 2
-					y: 0
+					x: spacingLeft + thickness / 2
+					y: 0 

@@ -29,7 +29,7 @@ exports.glyphs['Z_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: 80 / 88 * thickness * opticThickness
+						width: 80 / 88 * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -38,7 +38,7 @@ exports.glyphs['Z_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: 80 / 88 * thickness * opticThickness
+						width: 80 / 88 * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 0
 					})
@@ -51,7 +51,7 @@ exports.glyphs['Z_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: 80 / 88 * thickness * opticThickness
+						width: 80 / 88 * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 1
 					})
@@ -60,7 +60,7 @@ exports.glyphs['Z_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: 80 / 88 * thickness * opticThickness
+						width: 80 / 88 * thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 1
 					})
@@ -70,19 +70,19 @@ exports.glyphs['Z_cap'] =
 			nodes:
 				0:
 					x: contours[1].nodes[0].expandedTo[0].x
-					y: contours[1].nodes[0].expandedTo[0].y + 80 / 88 * thickness * opticThickness / 2 - 15 * (thickness / 80)
+					y: contours[1].nodes[0].expandedTo[0].y + 80 / 88 * thickness * opticThickness / 2 - 15 * (thickness / 80) * contrast
 					typeOut: 'line'
 					expand: Object({
 						width: 80 / 88 * thickness * opticThickness * 1.35
-						angle: 90 + 'deg'
+						angle: 270 + 'deg'
 						distr: 0.5
 					})
 				1:
 					x: contours[0].nodes[1].expandedTo[1].x
-					y: contours[0].nodes[1].expandedTo[1].y - 80 / 88 * thickness * opticThickness / 2 + 15 * (thickness / 80)
+					y: contours[0].nodes[1].expandedTo[1].y - 80 / 88 * thickness * opticThickness / 2 + 15 * (thickness / 80) * contrast
 					typeOut: 'line'
 					expand: Object({
 						width: 80 / 88 * thickness * opticThickness * 1.35
-						angle: 90 + 'deg'
+						angle: 270 + 'deg'
 						distr: 0.5
 					})

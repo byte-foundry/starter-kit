@@ -74,7 +74,7 @@ exports.glyphs['H_cap'] =
 					typeOut: "line"
 					expand: Object({
 						width: thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: 270 + 'deg'
 						distr: 0.5
 					})
 				1:
@@ -83,6 +83,6 @@ exports.glyphs['H_cap'] =
 					typeOut: "line"
 					expand: Object({
 						width: thickness * opticThickness * contrast
-						angle: 90 + 'deg'
+						angle: 270 + 'deg'
 						distr: 0.5
 					})

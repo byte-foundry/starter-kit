@@ -87,8 +87,8 @@ exports.glyphs['G_cap'] =
 					dirOut: 0 + 'deg'
 					expand: Object({
 						width: thickness * opticThickness * contrast
-						angle: 90 + 'deg'
-						distr: 0
+						angle: 270 + 'deg'
+						distr: 1
 					})
 				1:
 					x: 375 + 200 * width + (thickness / 80 - 1) * width * 30
@@ -99,8 +99,8 @@ exports.glyphs['G_cap'] =
 							if contrast < 1
 							then thickness * opticThickness * (contrast + (1 - contrast) * 1.4)
 							else thickness * opticThickness * contrast
-						angle: 90 + 'deg'
-						distr: 0
+						angle: 270 + 'deg'
+						distr: 1
 					})
 		3:
 			skeleton: true
@@ -108,12 +108,12 @@ exports.glyphs['G_cap'] =
 			nodes:
 				0:
 					x: contours[2].nodes[1].x
-					y: contours[2].nodes[1].expandedTo[0].y
+					y: contours[2].nodes[1].expandedTo[1].y
 					typeOut: 'line'
 					expand: Object({
 						width: thickness * opticThickness
-						angle: 195 + 'deg'
-						distr: 0
+						angle: 10 + 'deg'
+						distr: 1
 					})
 				1:
 					x: contours[2].nodes[1].x
@@ -121,8 +121,8 @@ exports.glyphs['G_cap'] =
 					typeOut: 'line'
 					expand: Object({
 						width: thickness * opticThickness
-						angle: 180 + 'deg'
-						distr: 0
+						angle: 0 + 'deg'
+						distr: 1
 					})
 		4:
 			skeleton: true
@@ -133,8 +133,8 @@ exports.glyphs['G_cap'] =
 					y: contours[3].nodes[1].y
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness
-						angle: -90 + 'deg'
+						width: thickness * opticThickness * contrast
+						angle: 90 + 'deg'
 						distr: 0.5
 					})
 				1:
@@ -142,7 +142,7 @@ exports.glyphs['G_cap'] =
 					y: contours[4].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness
-						angle: -90 + 'deg'
+						width: thickness * opticThickness * contrast
+						angle: 90 + 'deg'
 						distr: 0.5
 					})

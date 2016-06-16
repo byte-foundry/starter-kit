@@ -40,7 +40,7 @@ exports.glyphs['Q_cap'] =
 					y: capHeight / 2
 					dirOut: 90 + 'deg'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness  * contrast
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -58,7 +58,7 @@ exports.glyphs['Q_cap'] =
 					y: contours[0].nodes[1].y
 					dirOut: 270 + 'deg'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -68,20 +68,20 @@ exports.glyphs['Q_cap'] =
 			nodes:
 				0:
 					x: contours[0].nodes[0].x
-					y: - overshoot
+					y: - overshoot + thickness * opticThickness / 2
 					dirOut: 0 + 'deg'
 					tensionOut: 1.4
 					expand: Object({
-						width: thickness * opticThickness
-						angle: 90 + 'deg'
-						distr: 0
+						width: thickness * opticThickness * contrast
+						angle: 270 + 'deg'
+						distr: 0.5
 					})
 				1:
 					x: contours[0].nodes[3].x
 					y: - 140
 					dirIn: 180 + 'deg'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
-						angle: 90 + 'deg'
-						distr: 0.25
+						width: 90 / 80 * thickness * opticThickness * contrast
+						angle: 270 + 'deg'
+						distr: 0.75
 					})

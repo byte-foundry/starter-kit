@@ -35,7 +35,7 @@ exports.glyphs['U_cap'] =
 						distr: 0.25
 					})
 				1:
-					x: spacingLeft + 0.25 * contours[0].nodes[2].expand.width
+					x: contours[0].nodes[0].x
 					y: capHeight / 3
 					dirOut: 90 + 'deg'
 					expand: Object({
@@ -48,7 +48,10 @@ exports.glyphs['U_cap'] =
 					y: 0
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width:
+							if contrast < 1
+							then thickness * opticThickness * (contrast + (1 - contrast) * 0.4)
+							else thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -58,7 +61,7 @@ exports.glyphs['U_cap'] =
 					dirIn: 90 + 'deg'
 					typeOut: 'line'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -67,7 +70,7 @@ exports.glyphs['U_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness
+						width: 90 / 80 * thickness * opticThickness * contrast
 						angle: 180 + 'deg'
 						distr: 0.25
 					})

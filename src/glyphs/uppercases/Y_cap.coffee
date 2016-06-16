@@ -51,16 +51,16 @@ exports.glyphs['Y_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: 90 / 80 * thickness * opticThickness + (width - 1) * 10
+						width: 90 / 80 * thickness * opticThickness * contrast + (width - 1) * 10
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
 				1:
-					x: contours[0].nodes[1].x
+					x: contours[0].nodes[1].x + (1 - contrast) * thickness / 2
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
 					expand: Object({
-						width: 85 / 80 * thickness * opticThickness
+						width: 85 / 80 * thickness * opticThickness * contrast
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
@@ -69,7 +69,7 @@ exports.glyphs['Y_cap'] =
 			closed: false
 			nodes:
 				0:
-					x: contours[0].nodes[1].x + ( contours[1].nodes[1].x - contours[0].nodes[1].x ) / 2
+					x: contours[0].nodes[1].x
 					y: contours[0].nodes[1].y
 					typeOut: 'line'
 					expand: Object({

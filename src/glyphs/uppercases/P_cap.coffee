@@ -25,7 +25,7 @@ exports.glyphs['P_cap'] =
 					y: 0
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -34,7 +34,7 @@ exports.glyphs['P_cap'] =
 					y: capHeight
 					typeOut: 'line'
 					expand: Object({
-						width: thickness
+						width: thickness * opticThickness
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -47,7 +47,7 @@ exports.glyphs['P_cap'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: -90 + 'deg'
 						distr: 0
 					})
@@ -56,7 +56,7 @@ exports.glyphs['P_cap'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: -90 + 'deg'
 						distr: 0
 					})
@@ -74,7 +74,7 @@ exports.glyphs['P_cap'] =
 					y: contours[0].nodes[1].y - (contours[0].nodes[1].y / 2) - 25
 					dirOut: 270 + 'deg'
 					expand: Object({
-						width: 85 / 80 * thickness * opticThickness
+						width: 85 / 80 * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.25
 					})
@@ -83,7 +83,7 @@ exports.glyphs['P_cap'] =
 					y: contours[0].nodes[1].y - (contours[0].nodes[1].y / 2) - 25
 					dirOut: 270 + 'deg'
 					expand: Object({
-						width: 85 / 80 * thickness * opticThickness
+						width: 85 / 80 * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0.25
 					})

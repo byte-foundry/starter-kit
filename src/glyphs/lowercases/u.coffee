@@ -9,7 +9,7 @@ exports.glyphs['u'] =
 	)
 	parameters:
 		spacingLeft: 70 * spacing
-		spacingRight: 70 * spacing
+		spacingRight: 50 * spacing
 	tags: [
 		'all',
 		'latin',

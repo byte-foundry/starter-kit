@@ -25,7 +25,7 @@ exports.glyphs['K_cap'] =
 					y: 0
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 *thickness * opticThickness)
+						width: (88 / 80 * thickness * opticThickness)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -34,7 +34,7 @@ exports.glyphs['K_cap'] =
 					y: capHeight
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 *thickness * opticThickness)
+						width: (88 / 80 * thickness * opticThickness)
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -47,7 +47,7 @@ exports.glyphs['K_cap'] =
 					y: 0
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 10
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 30
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
@@ -56,7 +56,7 @@ exports.glyphs['K_cap'] =
 					y: capHeight * 0.5
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 8
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 15
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -65,7 +65,7 @@ exports.glyphs['K_cap'] =
 					y: capHeight
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 10
+						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 25
 						angle: 0 + 'deg'
 						distr: 0.75
 					})

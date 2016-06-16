@@ -15,6 +15,7 @@ exports.glyphs['l'] =
 		'latin',
 		'lowercase'
 	]
+
 	contours:
 		0:
 			skeleton: true

@@ -17,8 +17,8 @@ exports.glyphs['O_cap'] =
 	]
 	anchors:
 		0:
-			x: 0
-			y: 0
+			x: contours[0].nodes[2].x
+			y: capHeight + diacriticHeight
 			left: contours[0].nodes[1].expandedTo[0].x
 			right: contours[0].nodes[3].expandedTo[0].x
 	contours:

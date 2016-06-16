@@ -17,15 +17,15 @@ exports.glyphs['I_cap'] =
 	]
 	anchors:
 		0:
-			x: 0
-			y: 0
+			x: contours[0].nodes[1].x
+			y: capHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: spacingLeft + 0.25 * (88 / 80 *thickness * opticThickness)
+					x: spacingLeft + 0.5 * (88 / 80 *thickness * opticThickness)
 					y: 0
 					typeOut: "line"
 					expand: Object({

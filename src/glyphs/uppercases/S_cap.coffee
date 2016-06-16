@@ -27,12 +27,12 @@ exports.glyphs['S_cap'] =
 			nodes:
 				0:
 					x: spacingLeft + thickness * 0.25
-					y: capHeight / 4 + (thickness / 80 - 1) * 20 + 5 * (width - 1)
-					dirOut: 90 + 'deg'
+					y: contours[0].nodes[1].y + 40
+					dirOut: Utils.lineAngle( contours[0].nodes[1].point, contours[0].nodes[0].point ) - 10 / 180 * Math.PI
 					expand: Object({
-						width: thickness + (width - 1) * 15 * (thickness / 80 - 1)
-						angle: 0 + 'deg'
-						distr: 0.25
+						width: thickness * opticThickness
+						angle: 90 + 'deg'
+						distr: 0
 					})
 				1:
 					x: contours[0].nodes[0].expandedTo[0].x + 140 + 200 * width / 2
@@ -48,7 +48,7 @@ exports.glyphs['S_cap'] =
 					y: capHeight / 4 + (thickness / 80 - 1) * 20 + 5 * (width - 1)
 					dirIn: 90 + 'deg'
 					expand: Object({
-						width: thickness + (width - 1) * 15 * (thickness / 80 - 1)
+						width: thickness + Math.max(0, (width - 1) * 20 * (thickness / 80 - 1))
 						angle: 180 + 'deg'
 						distr: 0.25
 					})
@@ -67,7 +67,7 @@ exports.glyphs['S_cap'] =
 					y: capHeight / 4 * 3 - (thickness / 80 - 1) * 20 - 5 * (width - 1)
 					dirOut: 90 + 'deg'
 					expand: Object({
-						width: thickness + (width - 1) * 15 * (thickness / 80 - 1)
+						width: thickness + Math.max(0, (width - 1) * 20 * (thickness / 80 - 1))
 						angle: 180 + 'deg'
 						distr: 0.75
 					})
@@ -82,10 +82,10 @@ exports.glyphs['S_cap'] =
 					})
 				6:
 					x: contours[0].nodes[2].x
-					y: capHeight / 4 * 3 - (thickness / 80 - 1) * 20 - 5 * (width - 1)
-					dirOut: 90 + 'deg'
+					y: contours[0].nodes[5].y - 40
+					dirIn: Utils.lineAngle( contours[0].nodes[5].point, contours[0].nodes[6].point ) - 10 / 180 * Math.PI
 					expand: Object({
-						width: thickness
-						angle: 0 + 'deg'
-						distr: 0.75
+						width: thickness * opticThickness
+						angle: 90 + 'deg'
+						distr: 1
 					})

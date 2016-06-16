@@ -25,11 +25,11 @@ exports.glyphs['A_cap'] =
 			closed: false
 			nodes:
 				1:
-					x: ( contours[0].nodes[0].x + contours[1].nodes[0].x ) / 2 + ( 7.5 * (thickness * opticThickness) / 80 ) - (88 / 80 * thickness * opticThickness) * 0.75
+					x: ( contours[0].nodes[0].x + contours[1].nodes[0].x ) / 2 + ( 7.5 * (thickness * opticThickness) / 80 * contrast ) - (88 / 80 * thickness * opticThickness) * 0.75 * contrast
 					y: capHeight
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 5
+						width: (88 / 80 * thickness * opticThickness) * contrast + (width - 1) * 5
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -38,7 +38,7 @@ exports.glyphs['A_cap'] =
 					y: 0
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 5
+						width: (88 / 80 * thickness * opticThickness) * contrast + (width - 1) * 5
 						angle: 0 + 'deg'
 						distr: 0.25
 					})
@@ -73,7 +73,7 @@ exports.glyphs['A_cap'] =
 					y: capHeight * 0.3
 					typeOut: "line"
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) + Math.PI
 						distr: 0.5
 					})
@@ -82,7 +82,7 @@ exports.glyphs['A_cap'] =
 					y: capHeight * 0.3
 					typeOut: "line"
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: Utils.lineAngle( contours[1].nodes[1].point, contours[1].nodes[0].point )
 						distr: 0.5
 					})

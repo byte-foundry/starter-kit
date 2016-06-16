@@ -61,11 +61,20 @@ exports.glyphs['K_cap'] =
 						distr: 0.25
 					})
 				2:
+					x: contours[0].nodes[0].expandedTo[1].x
+					y: capHeight * 0.5
+					typeOut: "line"
+					expand: Object({
+						width: (88 / 80 * thickness * opticThickness) * contrast + (width - 1) * 15
+						angle: 0 + 'deg'
+						distr: 0.25
+					})
+				3:
 					x: 150 + 200 * width + 0.75 * (88 / 80 * thickness * opticThickness)
 					y: capHeight
 					typeOut: "line"
 					expand: Object({
-						width: (88 / 80 * thickness * opticThickness) + (width - 1) * 25
+						width: (88 / 80 * thickness * opticThickness) * contrast + (width - 1) * 25
 						angle: 0 + 'deg'
 						distr: 0.75
 					})

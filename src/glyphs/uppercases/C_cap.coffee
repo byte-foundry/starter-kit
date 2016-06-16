@@ -30,7 +30,7 @@ exports.glyphs['C_cap'] =
 					y: -overshoot
 					dirOut: 180 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -48,7 +48,7 @@ exports.glyphs['C_cap'] =
 					y: capHeight + overshoot
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: -90 + 'deg'
 						distr: 0
 					})
@@ -61,16 +61,19 @@ exports.glyphs['C_cap'] =
 					y: contours[0].nodes[2].y
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: -90 + 'deg'
 						distr: 0
 					})
 				1:
 					x: 375 + 200 * width
 					y: contours[1].nodes[0].y - 40
-					dirIn: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) - 20 / 180 * Math.PI
+					dirIn: Utils.lineAngle( contours[1].nodes[0].point, contours[1].nodes[1].point ) - 20 / 180 * Math.PI - contours[1].nodes[1].expand.width / 80 * Math.PI / 12
 					expand: Object({
-						width: thickness * opticThickness
+						width:
+							if contrast < 1
+							then thickness * opticThickness * (contrast + (1 - contrast) * 1.4)
+							else thickness * opticThickness * contrast
 						angle: -90 + 'deg'
 						distr: 0
 					})
@@ -83,16 +86,19 @@ exports.glyphs['C_cap'] =
 					y: contours[0].nodes[0].y
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
 				1:
 					x: 375 + 200 * width
 					y: contours[2].nodes[0].y + 40
-					dirIn: Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) + 20 / 180 * Math.PI
+					dirIn: Utils.lineAngle( contours[2].nodes[0].point, contours[2].nodes[1].point ) + 20 / 180 * Math.PI + contours[1].nodes[1].expand.width / 80 * Math.PI / 12
 					expand: Object({
-						width: thickness * opticThickness
+						width:
+							if contrast < 1
+							then thickness * opticThickness * (contrast + (1 - contrast) * 1.4)
+							else thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})

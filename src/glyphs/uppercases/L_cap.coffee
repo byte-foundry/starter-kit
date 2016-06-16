@@ -47,7 +47,7 @@ exports.glyphs['L_cap'] =
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 1
 					})
@@ -56,7 +56,7 @@ exports.glyphs['L_cap'] =
 					y: contours[0].nodes[0].y
 					typeOut: 'line'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 1
 					})

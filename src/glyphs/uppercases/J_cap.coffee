@@ -48,14 +48,14 @@ exports.glyphs['J'] =
 					dirOut: 180 + 'deg'
 					type: 'smooth'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: - 90 + 'deg'
 						distr: 1
 					})
 				3:
 					x:  - 205 - 175 * width
 					y: contours[0].nodes[2].y + 50
-					dirIn: - 30 + 'deg'
+					dirIn: - 30 - (80 / contours[0].nodes[2].expand.width) * 7 + 'deg'
 					expand: Object({
 						width: ( 90 / 80 ) * thickness * opticThickness
 						angle: - 90 + 'deg'

@@ -47,7 +47,7 @@ exports.glyphs['D_cap'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: -90 + 'deg'
 						distr: 0
 					})
@@ -56,7 +56,7 @@ exports.glyphs['D_cap'] =
 					y: capHeight
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: thickness * opticThickness
+						width: thickness * opticThickness * contrast
 						angle: -90 + 'deg'
 						distr: 0
 					})
@@ -74,7 +74,7 @@ exports.glyphs['D_cap'] =
 					y: 0
 					dirOut: 270 + 'deg'
 					expand: Object({
-						width: 85 / 80 * thickness * opticThickness
+						width: 85 / 80 * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})
@@ -83,7 +83,7 @@ exports.glyphs['D_cap'] =
 					y: 0
 					dirOut: 270 + 'deg'
 					expand: Object({
-						width: 85 / 80 * thickness * opticThickness
+						width: 85 / 80 * thickness * opticThickness * contrast
 						angle: 90 + 'deg'
 						distr: 0
 					})

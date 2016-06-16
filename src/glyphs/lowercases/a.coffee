@@ -8,8 +8,8 @@ exports.glyphs['a'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 50 * spacing
-		spacingRight: 50 * spacing
+		spacingLeft: 70 * spacing
+		spacingRight: 70 * spacing
 	tags: [
 		'all',
 		'latin',
@@ -17,7 +17,7 @@ exports.glyphs['a'] =
 	]
 	anchors:
 		0:
-			x: 0
+			x: contours[1].nodes[0].x + ( contours[1].nodes[1].x - contours[1].nodes[0].x ) * 0.8
 			y: xHeight + diacriticHeight
 	contours:
 		0:

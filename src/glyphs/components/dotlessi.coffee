@@ -2,30 +2,41 @@ exports.glyphs['dotlessi'] =
 	glyphName: "dotlessi"
 	characterName: "LATIN SMALL LETTER DOTLESS I"
 	unicode: 'ı'
-	anchors:
-		0:
-			x: parentAnchors[0].x
-			y: parentAnchors[0].y
 	tags: [
 		'component',
 		'diacritic'
 	]
 	ot:
-		advanceWidth: 0 + spacingRight
+		advanceWidth: contours[0].nodes[1].expandedTo[1].x + spacingRight
 	parameters:
-		spacingLeft: 0 * spacing
-		spacingRight: 0 * spacing
+		spacingLeft: 70 * spacing + (97)
+		spacingRight: 70 * spacing
+	anchors:
+		0:
+			x: contours[0].nodes[0].x
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
 			closed: false
 			nodes:
 				0:
-					x: 0
+					x: spacingLeft
 					y: 0
-					dirOut: 0 + 'deg'
+					dirOut: - 90 + 'deg'
+					typeOut: 'line'
 					expand: Object({
-						width: 0
+						width: thickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
+					})
+				1:
+					x: contours[0].nodes[0].x
+					y: xHeight
+					dirOut: - 90 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: thickness
+						angle: 0 + 'deg'
+						distr: 0.5
 					})

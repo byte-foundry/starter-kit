@@ -15,11 +15,20 @@ exports.glyphs['caronSlovak'] =
 			closed: false
 			nodes:
 				0:
-					x: 0
-					y: 0
-					dirOut: 0 + 'deg'
+					x: anchors[0].x
+					y: anchors[0].y
+					typeOut: 'line'
 					expand: Object({
-						width: 0
+						width: thickness * ( 125 / 115 )
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
+					})
+				1:
+					x: contours[0].nodes[0].x - 20 * width
+					y: anchors[0].y - 150
+					typeOut: 'line'
+					expand: Object({
+						width: Math.min( minThickness, ( 85 / 80 ) * thickness )
+						angle: 0 + 'deg'
+						distr: 0.5
 					})

@@ -15,6 +15,10 @@ exports.glyphs['u'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: 0
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
@@ -52,7 +56,7 @@ exports.glyphs['u'] =
 						angle: - 90 + 'deg'
 						distr: 0.9
 					})
-				1: 
+				1:
 					x: contours[1].nodes[2].expandedTo[1].x - ( contours[1].nodes[2].expandedTo[1].x - contours[0].nodes[0].expandedTo[0].x ) * (100/300)
 					y: 0 - overshoot
 					dirIn: 0 + 'deg'

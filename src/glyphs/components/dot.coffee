@@ -8,15 +8,22 @@ exports.glyphs['dot'] =
 	]
 	contours:
 		0:
-			skeleton: true
-			closed: false
+			skeleton: false
+			closed: true
 			nodes:
 				0:
-					x: 0
-					y: 0
-					dirOut: 0 + 'deg'
-					expand: Object({
-						width: 0
-						angle: 0 + 'deg'
-						distr: 0.25
-					})
+					x: anchors[0].x - minThickness / 2
+					y: anchors[0].y
+					typeOut: 'line'
+				1:
+					x: contours[0].nodes[0].x
+					y: contours[0].nodes[0].y + minThickness
+					typeOut: 'line'
+				2:
+					x: contours[0].nodes[1].x + minThickness
+					y: contours[0].nodes[1].y
+					typeOut: 'line'
+				3:
+					x: contours[0].nodes[2].x
+					y: contours[0].nodes[2].y - minThickness
+					typeOut: 'line'

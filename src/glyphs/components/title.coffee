@@ -13,11 +13,26 @@ exports.glyphs['title'] =
 			closed: false
 			nodes:
 				0:
-					x: 0
-					y: 0
-					dirOut: 0 + 'deg'
+					x: anchors[0].x
+					y:
+						Math.min(
+							anchors[0].y,
+							ascenderHeight - 25 # Set a min value to display a legible title in thin weights
+						)
+					dirOut: - 90 + 'deg'
+					typeOut: 'line'
 					expand: Object({
-						width: 0
+						width: Math.max( thickness, 25 ) # Set a min value to display a legible title in thin weights
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
+					})
+				1:
+					x: contours[0].nodes[0].x
+					y: contours[0].nodes[0].y + Math.max( thickness, 25 )
+					dirOut: - 90 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: contours[0].nodes[0].expand.width
+						angle: 0 + 'deg'
+						distr: 0.5
 					})

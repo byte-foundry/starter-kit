@@ -15,7 +15,10 @@ exports.glyphs['a'] =
 		'latin',
 		'lowercase'
 	]
-	## Simple contours/shape with static coordinates
+	anchors:
+		0:
+			x: 0
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true
@@ -73,7 +76,7 @@ exports.glyphs['a'] =
 						angle: - 90 + 'deg'
 						distr: 0.1
 					})
-				1: 
+				1:
 					x: (contours[0].nodes[1].expandedTo[1].x + ( contours[1].nodes[2].expandedTo[0].x - contours[0].nodes[1].expandedTo[1].x ) * (200/300)) - 10
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'

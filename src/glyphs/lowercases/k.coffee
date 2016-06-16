@@ -26,7 +26,7 @@ exports.glyphs['k'] =
 					y: 0
 					dirOut: 90 + 'deg'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
+						width: ( 80 / 80 ) * thickness
 						angle: 0 + 'deg'
 						distr: 0.5
 					})
@@ -35,7 +35,7 @@ exports.glyphs['k'] =
 					y: xHeight
 					dirIn: 180 + 'deg'
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
+						width: ( 80 / 80 ) * thickness
 						angle: - 90 + 'deg'
 						distr: 0.5
 					})
@@ -43,7 +43,7 @@ exports.glyphs['k'] =
 					x: 400 + (40/115) * thickness
 					y: 0
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
+						width: ( 80 / 80 ) * thickness
 						angle: 180 + 'deg'
 						distr: 0.5
 					})
@@ -51,7 +51,7 @@ exports.glyphs['k'] =
 					x: contours[0].nodes[1].x
 					y: descender
 					expand: Object({
-						width: ( 80 / 115 ) * thickness
+						width: ( 80 / 80 ) * thickness
 						angle: 90 + 'deg'
 						distr: 0.5
 					})

@@ -12,11 +12,31 @@ exports.glyphs['_quotesingle'] =
 			closed: false
 			nodes:
 				0:
-					x: 0
-					y: 0
+					x: anchors[0].x
+					y: capHeight
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: minThickness - ( 10 / 80 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})
+				1:
+					x: contours[0].nodes[0].x
+					y: capHeight - minThickness + (5)
+					dirOut: 0 + 'deg'
+					typeOut: 'line'
+					expand: Object({
+						width: minThickness - ( 10 / 80 ) * thickness
+						angle: 0 + 'deg'
+						distr: 0.5
+					})
+				2:
+					x: contours[0].nodes[0].x
+					y: contours[0].nodes[1].y - minThickness + (15)
 					dirOut: 0 + 'deg'
 					expand: Object({
-						width: 0
+						width: ( 55 / 80 ) * thickness
 						angle: 0 + 'deg'
-						distr: 0.25
+						distr: 0.5
 					})

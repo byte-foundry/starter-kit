@@ -15,6 +15,10 @@ exports.glyphs['c'] =
 		'latin',
 		'lowercase'
 	]
+	anchors:
+		0:
+			x: 0
+			y: xHeight + diacriticHeight
 	contours:
 		0:
 			skeleton: true

@@ -111,7 +111,7 @@ exports.glyphs['G_cap'] =
 					})
 				1:
 					x: contours[2].nodes[1].x
-					y: contours[0].nodes[1].y + (thickness / 80 - 1) * 55
+					y: contours[0].nodes[1].y
 					typeOut: 'line'
 					expand: Object({
 						width: thickness * opticThickness

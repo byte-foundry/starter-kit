@@ -8,7 +8,7 @@ exports.glyphs['q'] =
 		['skewX', slant + 'deg']
 	)
 	parameters:
-		spacingLeft: 30 * spacing
+		spacingLeft: 40 * spacing
 		spacingRight: 70 * spacing
 	tags: [
 		'all',
@@ -23,7 +23,7 @@ exports.glyphs['q'] =
 				0:
 					x: 210 + 210 * width
 					y: xHeight - 100
-					dirOut: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) - 20 / 180 * Math.PI 
+					dirOut: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) - 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness
 						angle: - 90 + 'deg'
@@ -60,7 +60,7 @@ exports.glyphs['q'] =
 				4:
 					x: contours[0].nodes[0].x + 10
 					y: 70
-					dirIn: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[4].point ) + 20 / 180 * Math.PI 
+					dirIn: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[4].point ) + 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness
 						angle: 90 + 'deg'
@@ -88,4 +88,3 @@ exports.glyphs['q'] =
 						angle: 0 + 'deg'
 						distr: 0.75
 					})
-				

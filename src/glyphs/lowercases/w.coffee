@@ -5,7 +5,8 @@ exports.glyphs['w'] =
 	ot:
 		advanceWidth: contours[3].nodes[1].expandedTo[0].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant + 'deg'],
+		['translateY', baseLine]
 	)
 	parameters:
 		spacingLeft: 20 * spacing

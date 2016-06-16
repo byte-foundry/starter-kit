@@ -26,7 +26,7 @@ exports.glyphs['a'] =
 			nodes:
 				0:
 					x: contours[1].nodes[1].x
-					y: xHeight*2/3 + (thickness / 80 - 1) * 15 +15
+					y: xHeight*2/3 + (thickness / 80 - 1) * 15 +15 + baseLine
 					dirOut: 0 + 'deg'
 					tensionOut: 0.9
 					expand: Object({
@@ -36,7 +36,7 @@ exports.glyphs['a'] =
 					})
 				1:
 					x: spacingLeft - thickness * 0.25
-					y: 140 + (thickness / 80 - 1) * 15
+					y: 140 + (thickness / 80 - 1) * 15 + baseLine
 					tensionIn: 1.15
 					dirOut: 95 + 'deg'
 					expand: Object({
@@ -46,7 +46,7 @@ exports.glyphs['a'] =
 					})
 				2:
 					x: contours[0].nodes[1].x + (contours[1].nodes[1].x - contours[0].nodes[1].x) / 2 -15
-					y: 0
+					y: 0 + baseLine
 					dirOut: 0 + 'deg'
 					tensionOut: 1.9
 					expand: Object({
@@ -58,7 +58,7 @@ exports.glyphs['a'] =
 #			transforms: Array( [ 'scaleX', -1 ] )
 				3:
 					x: contours[1].nodes[0].expandedTo[1].x + thickness / 3 * 2
-					y: 150 - (8/80) * thickness
+					y: 150 - (8/80) * thickness + baseLine
 					tensionIn: 0.3
 					dirIn: -120 + 'deg'
 					expand: Object({
@@ -72,7 +72,7 @@ exports.glyphs['a'] =
 			nodes:
 				0:
 					x: contours[1].nodes[1].x
-					y: 0
+					y: 0 + baseLine
 					expand: Object({
 						width: thickness
 						angle: 180 + 'deg'
@@ -80,7 +80,7 @@ exports.glyphs['a'] =
 					})
 				1:
 					x: 163 + 200 * width
-					y: xHeight - 80 - 30 * width
+					y: xHeight - 80 - 30 * width + baseLine
 					dirOut: 90 + 'deg'
 					typeIn: 'line'
 					expand: Object({
@@ -88,9 +88,9 @@ exports.glyphs['a'] =
 						angle: 188 + 'deg'
 						distr: 0.25
 					})
-				2: 
+				2:
 					x: (contours[0].nodes[1].expandedTo[1].x + ( contours[1].nodes[1].expandedTo[0].x - contours[0].nodes[1].expandedTo[1].x ) * (200/300)) - 10
-					y: xHeight + overshoot
+					y: xHeight + overshoot + baseLine
 					dirIn: 0 + 'deg'
 					tensionOut: 1.3
 					expand: Object({
@@ -100,7 +100,7 @@ exports.glyphs['a'] =
 					})
 				3:
 					x: contours[0].nodes[1].x + thickness * ( 40 / 100 )
-					y: xHeight - 10 - (8/80) * thickness
+					y: xHeight - 10 - (8/80) * thickness + baseLine
 					dirIn: 8 + 'deg'
 					expand: Object({
 						width: thickness * 95 / 100

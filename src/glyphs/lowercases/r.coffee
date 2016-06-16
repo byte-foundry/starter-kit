@@ -5,7 +5,8 @@ exports.glyphs['r'] =
 	ot:
 		advanceWidth: contours[1].nodes[1].x + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant + 'deg'],
+		['translateY', baseLine]
 	)
 	parameters:
 		spacingLeft: 70 * spacing
@@ -55,7 +56,7 @@ exports.glyphs['r'] =
 						angle: - 90 + 'deg'
 						distr: 0.1
 					})
-				1: 
+				1:
 					x: contours[0].nodes[0].expandedTo[1].x + 170 * ((240 + 200 * width) / 440)
 					y: xHeight + overshoot
 					dirOut: 0 + 'deg'

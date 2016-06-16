@@ -14,6 +14,17 @@ exports.controls = [
 		disabled: false
 		demo: true
 	,
+		name: 'baseLine'
+		label: 'Base line'
+		min: 0
+		max: 400
+		step: 1
+		init: 0
+		minAdvised: 0
+		maxAdvised: 350
+		disabled: false
+		demo: true
+	,
 		name: 'capDelta'
 		label: 'Capital Height'
 		min: 0

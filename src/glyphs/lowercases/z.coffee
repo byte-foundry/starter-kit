@@ -5,7 +5,8 @@ exports.glyphs['z'] =
 	ot:
 		advanceWidth: 0 + spacingRight
 	transforms: Array(
-		['skewX', slant + 'deg']
+		['skewX', slant + 'deg'],
+		['translateY', baseLine]
 	)
 	parameters:
 		spacingLeft: 0 * spacing

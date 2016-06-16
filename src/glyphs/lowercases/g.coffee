@@ -27,7 +27,10 @@ exports.glyphs['g'] =
 			nodes:
 				0:
 					x: 220 + 200 * width
-					y: xHeight - 15 - 35 * ( thickness / 80 )
+					y: Math.min(
+						xHeight - 15 - 35 * ( thickness / 80 ),
+						xHeight - 50
+					)
 					dirOut: Utils.lineAngle( contours[0].nodes[0].point, contours[0].nodes[1].point ) - 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness
@@ -64,7 +67,10 @@ exports.glyphs['g'] =
 					})
 				4:
 					x: contours[0].nodes[0].x + 10
-					y: 15 + 35 * ( thickness / 80 )
+					y: Math.max(
+						15 + 35 * ( thickness / 80 ),
+						50
+					)
 					dirIn: Utils.lineAngle( contours[0].nodes[3].point, contours[0].nodes[4].point ) + 20 / 180 * Math.PI
 					expand: Object({
 						width: thickness
@@ -86,7 +92,10 @@ exports.glyphs['g'] =
 					})
 				1:
 					x: contours[0].nodes[0].x
-					y: contours[0].nodes[4].y
+					y: contours[0].nodes[4].y - Math.max(
+						60,
+						30 * ( thickness / 80 )
+					)
 					dirOut: - 90 + 'deg'
 					expand: Object({
 						width: thickness
@@ -105,7 +114,7 @@ exports.glyphs['g'] =
 						distr: 1
 					})
 				3:
-					x: contours[0].nodes[2].expandedTo[0].x
+					x: contours[0].nodes[2].expandedTo[0].x + 20
 					y: descender * ( 230 / 300 )
 					dirIn: Utils.lineAngle( contours[1].nodes[3].point, contours[1].nodes[2].point ) - 20 / 180 * Math.PI
 					type: 'smooth'

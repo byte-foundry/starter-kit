@@ -101,7 +101,7 @@ exports.glyphs['R_cap'] =
 						distr: 0.25
 					})
 				1:
-					x: contours[1].nodes[3].x + 250
+					x: contours[1].nodes[3].x + 50 + 200 * width
 					y: 0
 					typeOut: 'line'
 					expand: Object({

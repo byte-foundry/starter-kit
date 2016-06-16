@@ -94,9 +94,10 @@ exports.glyphs['g'] =
 					x: contours[0].nodes[0].x
 					y: contours[0].nodes[4].y - Math.max(
 						60,
-						30 * ( thickness / 80 )
+						100 * ( thickness / 80 )
 					)
 					dirOut: - 90 + 'deg'
+					tensionOut: 1.15
 					expand: Object({
 						width: thickness
 						angle: 0 + 'deg'
